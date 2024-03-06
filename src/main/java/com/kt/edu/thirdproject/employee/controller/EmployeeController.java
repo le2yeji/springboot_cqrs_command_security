@@ -4,12 +4,12 @@ import com.kt.edu.thirdproject.employee.domain.EmployeeEntity;
 import com.kt.edu.thirdproject.employee.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @Tag(name = "Employee", description = "Employee API")
 @RestController
@@ -20,19 +20,6 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
-
-    //@Cacheable(cacheNames = "employee")
-    @GetMapping("/employees")
-    @Operation(summary ="임직원 전체 조회",description="임직원 전체를 조회 합니다.")
-    public List<EmployeeEntity> getEmployeeList() {
-        return this.employeeService.getEmployeeList();
-    }
-
-    @Operation(summary ="임직원 단건 조회",description="특정 임직원 단건에 대한 정보 조회 합니다.")
-    @GetMapping("/employees/{id}")
-    public EmployeeEntity getEmployee(@PathVariable Long id) {
-        return this.employeeService.getEmployee(id);
-    }
 
     @Operation(summary ="임직원 등록",description="임직원을 등록합니다.")
     @PostMapping("/employees")
