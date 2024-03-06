@@ -1,14 +1,12 @@
-package com.kt.edu.thirdproject.employee.controller;
+package com.kt.edu.thirdproject.employee.command.controller;
 
-import com.kt.edu.thirdproject.employee.domain.EmployeeEntity;
-import com.kt.edu.thirdproject.employee.service.EmployeeService;
+import com.kt.edu.thirdproject.employee.command.service.EmployeeService;
+import com.kt.edu.thirdproject.employee.command.domain.EmployeeEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @Tag(name = "Employee", description = "Employee API")
