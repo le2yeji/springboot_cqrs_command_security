@@ -10,7 +10,7 @@ spring:
     active: prd
   banner:
     location: "classpath:banner.txt"
-# cache 사용을 위해 cache name 설정
+  # cache 사용을 위해 cache name 설정
   cache:
     cache-names: employee
 #  security:
@@ -49,4 +49,3 @@ app-info:
   license_url: "https://github.com/kt-cloudnative/education/"
   version: "@app.build.timestamp@"
   doc-desc: "교육용"
-

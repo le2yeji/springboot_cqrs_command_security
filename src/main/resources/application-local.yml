@@ -2,7 +2,7 @@
 ### local
 ##############
 server:
-  port: 8081
+  port: 8080
 spring:
   h2:
     # h2 DB
@@ -30,7 +30,7 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
-        
+
 # spring boot - actuator expose
 management:
   endpoints:
@@ -38,7 +38,7 @@ management:
       show-details: always
       enabled: true
     loggers:
-      enabled: true  
+      enabled: true
     prometheus:
       enabled: true
     web:
